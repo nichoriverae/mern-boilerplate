@@ -56,8 +56,6 @@ module.exports = (env, argv) => {
         views: `${srcPath}/views/`,
         store: `${srcPath}/store/`,
         assets: `${srcPath}/assets/`,
-        constants: `${srcPath}/constants/`,
-        validation: `${srcPath}/validation/`,
       }
     },
     output: {
@@ -70,10 +68,6 @@ module.exports = (env, argv) => {
         'process.env': {
           API_HOST: JSON.stringify(process.env.API_HOST),
           NODE_ENV: JSON.stringify(argv.mode),
-          STRIPE_PUBLISHABLE_KEY: JSON.stringify(process.env.STRIPE_PUBLISHABLE_KEY),
-          SENTRY_DSN_CLIENT: JSON.stringify(process.env.SENTRY_DSN_CLIENT),
-          VERSION_NUMBER: JSON.stringify(process.env.VERSION_NUMBER),
-          SIGNUP_ENABLED: JSON.stringify(process.env.SIGNUP_ENABLED),
         }
       }),
       new webpack.HotModuleReplacementPlugin(),
@@ -88,9 +82,6 @@ module.exports = (env, argv) => {
       }),
       new CopyWebpackPlugin([
         {
-          from: path.resolve(__dirname, 'src/assets/favicons/'),
-          to: path.resolve(__dirname, 'dist/assets/favicons/')
-        }, {
           from: path.resolve(__dirname, 'browserconfig.xml'),
           to: path.resolve(__dirname, 'dist/browserconfig.xml')
         }, {
