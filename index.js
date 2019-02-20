@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv').config();
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 5000;
 
 mongoose.Promise = global.Promise;
 
