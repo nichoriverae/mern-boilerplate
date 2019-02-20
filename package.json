@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:build-react": "npm run build:react && npm start",
+    "build:react": "cd client && npm run build && cd ..",
+    "start": "npm run build && npm run migrate && node index.js",
+    "preinstall": "node ./util/preinstall.js",
+    "heroku-postbuild": "npm run build && cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,28 @@
   "bugs": {
     "url": "https://github.com/nichoriverae/personal-site/issues"
   },
-  "homepage": "https://github.com/nichoriverae/personal-site#readme"
+  "homepage": "https://github.com/nichoriverae/personal-site#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.3.1",
+    "babel-cli": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.4",
+    "express-sslify": "^1.2.0",
+    "history": "^4.7.2",
+    "jwt-simple": "^0.5.5",
+    "moment": "^2.22.2",
+    "mongodb-uri": "^0.9.7",
+    "mongoose": "^5.4.14",
+    "node-fetch": "^2.2.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^5.2.0"
+  }
 }

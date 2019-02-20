@@ -1,0 +1,20 @@
+{
+  "extends": ["eslint:recommended" ],
+  "plugins": ["import"],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "arrow-body-style": ["warn", "as-needed"],
+    "import/no-unresolved": [1, { "commonjs": true, "amd": true }],
+    "no-console": "warn",
+    "no-unused-vars": "warn",
+  }
+}
