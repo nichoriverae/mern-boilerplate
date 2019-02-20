@@ -15,6 +15,6 @@
     "arrow-body-style": ["warn", "as-needed"],
     "import/no-unresolved": [1, { "commonjs": true, "amd": true }],
     "no-console": "warn",
-    "no-unused-vars": "warn",
+    "no-unused-vars": "warn"
   }
 }
