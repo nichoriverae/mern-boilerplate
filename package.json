@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "8.11.3"
+  },
   "scripts": {
     "start:build-react": "npm run build:react && npm start",
     "build:react": "cd client && npm run build && cd ..",
@@ -23,6 +26,7 @@
   "dependencies": {
     "@babel/preset-env": "^7.3.1",
     "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "dotenv": "^6.0.0",
@@ -41,6 +45,8 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
+    "eslint": "^5.14.1",
+    "eslint-plugin-import": "^2.16.0",
     "mocha": "^5.2.0"
   }
 }
