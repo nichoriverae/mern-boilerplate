@@ -30,7 +30,8 @@ mongoose.connection.on('error', (error) => {
   console.log('ERROR: ' + error)
 })
 const run = async () => {
-  await mongoose.connect(process.env.MONGO_URI, {
+  await mongoose.connect(`${process.env.MONGO_URI}`, {
+    useNewUrlParser: false,
     autoReconnect: true,
     reconnectTries: 1000000,
     reconnectInterval: 3000,

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 // import { Provider } from 'react-redux';
 // import store from './store/store';
 import App from './App';
-// import './styles/index.scss';
+import './styles/index.scss';
 
 ReactDOM.render(
   <div>
@@ -12,4 +12,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// module.hot.accept();
+module.hot.accept();
