@@ -81,10 +81,7 @@ module.exports = (env, argv) => {
         filename: 'index.html'
       }),
       new CopyWebpackPlugin([
-        {
-          from: path.resolve(__dirname, 'browserconfig.xml'),
-          to: path.resolve(__dirname, 'dist/browserconfig.xml')
-        }, {
+       {
           from: path.resolve(__dirname, 'manifest.json'),
           to: path.resolve(__dirname, 'dist/manifest.json')
         }
