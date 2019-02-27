@@ -1,0 +1,24 @@
+body {
+  font-family: $main-font;
+  background-color: $green-light;
+
+  .app {
+    position: static;
+    height: 100vh;
+  }
+}
+
+div {
+  &:focus {
+    outline: none;
+    // when modal opens, focus shifts & we don't want an outline
+  }
+}
+
+h1, h2, h3, h4, a {
+  color: $green-bold;
+}
+
+p {
+  line-height: 1.35;
+}

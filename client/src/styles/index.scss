@@ -1,1 +1,11 @@
 @import 'normalize.scss';
+@import 'fonts.scss';
+@import 'colors.scss';
+@import 'main.scss';
+
+// components
+@import 'components/header.scss';
+@import 'components/menu.scss';
+
+// views
+@import 'views/home.scss';

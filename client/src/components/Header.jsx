@@ -2,9 +2,10 @@ import React from 'react';
 import Menu from './Menu';
 
 
-// @TODO: needs some styling and an image
+// @TODO: needs image
 const Header = () => (
   <div className="header">
+      <img />
       <Menu />
   </div>
 );
